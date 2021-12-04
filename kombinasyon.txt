@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class kombinasyon {
+    public static void main(String[] args) {
+        int n,r,i=1,total=1,total1=1,j=1,total2=1,k=1;
+        Scanner scan= new Scanner(System.in);
+        System.out.print("Bir Değer giriniz:");
+        n = scan.nextInt();
+        System.out.print("Bir Değer giriniz:");
+        r = scan.nextInt();
+        int x=n-r;
+        while (n>=i){
+            total=total*i;
+            i++;
+        }
+        while (r>=j && r<=n) {
+            total1 = total1 * j;
+            j++;
+        }
+        while (x>=k && k>=0) {
+            total2 = total2 * k;
+            k++;
+        }
+        System.out.print("SONUÇ="+total/(total1*total2));
+    }
+}
